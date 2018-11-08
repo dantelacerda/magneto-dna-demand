@@ -18,18 +18,18 @@ public class Mutant {
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_mutant")
 	private Long id;
 	
-	@Column(name = "dnaSeq", nullable = false, length = 150)
-	private String dnaSequence;
+	@Column(name = "dnaseq", nullable = false, length = 150)
+	private String dnaseq;
 	
 	public Mutant(String[] dnaSequence) {
-		this.dnaSequence = String.join("", dnaSequence);
+		this.dnaseq = String.join("", dnaSequence);
 	}
 	
 	public String getDnaSequence() {
-		return dnaSequence;
+		return dnaseq;
 	}
 
 	public void setDnaSequence(String dnaSequence) {
-		this.dnaSequence = dnaSequence;
+		this.dnaseq = dnaSequence;
 	}
 }

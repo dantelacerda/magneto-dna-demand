@@ -47,3 +47,27 @@ O serviço retorna a contagem de mutantes detectados, a contagem de seres humano
 }
 
 Se não houver humanos, a proporção será 0.
+
+
+Base de Dados:
+
+Deverá ser utilizado um banco de Dados PostgreSQL na porta 5432, conectando com o usuário postgres e senha postgres;
+
+Scripts:
+
+CREATE TABLE human
+(
+  id         INTEGER NOT NULL,
+  dnaSeq VARCHAR(40) NOT NULL
+  
+);
+
+CREATE TABLE mutant
+(
+  id         INTEGER NOT NULL,
+  dnaSeq VARCHAR(40) NOT NULL
+  
+);
+
+CREATE SEQUENCE seq_mutant START 1;
+CREATE SEQUENCE seq_human START 1;

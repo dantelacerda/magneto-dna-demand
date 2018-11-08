@@ -9,7 +9,7 @@ import com.mercadolivre.model.Human;
 @Repository
 public interface HumanRepository extends JpaRepository<Human, Long> {
 
-	@Query("From human where dnaSequence like %?1%")
+	@Query("SELECT c.id From human c where c.dnaseq like %?1%")
 	public Human buscaHumanPorSeq(String seq);
 
 }
